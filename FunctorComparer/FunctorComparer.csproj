@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Steven Thuriot</Authors>
+    <Description>Stop reinventing the wheel and forever recreating this simple class that takes a Func or Comparison and turns it into a (Equality-)Comparer instance.</Description>
+    <PackageProjectUrl>https://github.com/StevenThuriot/FunctorComparer</PackageProjectUrl>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/StevenThuriot/FunctorComparer/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/StevenThuriot/FunctorComparer</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
 </Project>
