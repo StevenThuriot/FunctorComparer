@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>net46;net45;net40;net35;netstandard1.0;netstandard1.3;netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Steven Thuriot</Authors>
     <Description>Stop reinventing the wheel and forever recreating this simple class that takes a Func or Comparison and turns it into a (Equality-)Comparer instance.</Description>

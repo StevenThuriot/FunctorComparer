@@ -7,7 +7,7 @@ namespace FunctorComparer
 
     public class CombinedEqualityComparer<T> : IEqualityComparer<T>
     {
-        readonly IReadOnlyList<IEqualityComparer<T>> _comparers;
+        readonly IEnumerable<IEqualityComparer<T>> _comparers;
 
         public CombinedEqualityComparer(IEnumerable<IEqualityComparer<T>> comparers)
         {
@@ -30,7 +30,7 @@ namespace FunctorComparer
                 }
             }
 
-            _comparers = allComparers.AsReadOnly();
+            _comparers = allComparers;
         }
 
         public CombinedEqualityComparer(params IEqualityComparer<T>[] comparers)

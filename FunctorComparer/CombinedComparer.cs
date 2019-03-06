@@ -6,7 +6,7 @@ namespace FunctorComparer
 {
     public class CombinedComparer<T> : IComparer<T>
     {
-        readonly IReadOnlyList<IComparer<T>> _comparers;
+        readonly IEnumerable<IComparer<T>> _comparers;
 
         public CombinedComparer(IEnumerable<IComparer<T>> comparers)
         {
@@ -29,7 +29,7 @@ namespace FunctorComparer
                 }
             }
 
-            _comparers = allComparers.AsReadOnly();
+            _comparers = allComparers;
         }
 
         public CombinedComparer(params IComparer<T>[] comparers)
@@ -40,9 +40,9 @@ namespace FunctorComparer
 
         public int Compare(T x, T y)
         {
-            for (int i = 0; i < _comparers.Count; i++)
+            foreach (var comparer in _comparers)
             {
-                var result = _comparers[i].Compare(x, y);
+                var result = comparer.Compare(x, y);
 
                 if (result != 0)
                 {
