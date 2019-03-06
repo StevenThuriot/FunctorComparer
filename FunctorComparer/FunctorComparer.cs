@@ -20,5 +20,17 @@ namespace FunctorComparer
 
         //public static implicit operator FunctorComparer<T>(Comparison<T> value)
         //    => new FunctorComparer<T>(value);
+
+        public FunctorComparer<T> AsDescending()
+        {
+            var ascendingComparison = _comparison;
+
+            int comparison(T x, T y)
+            {
+                return -ascendingComparison(x, y);
+            }
+
+            return new FunctorComparer<T>(comparison);
+        }
     }
 }
