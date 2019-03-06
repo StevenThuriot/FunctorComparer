@@ -1,6 +1,6 @@
 # FunctorComparer
 
-Stop reinventing the wheel and forever recreating this simple class that takes a Func or Comparison and turns it into a Comparer.
+Stop reinventing the wheel and forever recreating this simple class that takes a `Func<T, TKey>` or `Comparison<T>` and turns it into a Comparer.
 
 ## Installation 
 
